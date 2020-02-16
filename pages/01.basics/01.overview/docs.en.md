@@ -2,6 +2,7 @@
 title: Overview
 taxonomy:
     category: docs
+slug: overview
 ---
 
 
