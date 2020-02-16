@@ -1,5 +1,5 @@
 ---
-title: Advanced
+title: 'Download and Installation'
 taxonomy:
     category: docs
 child_type: docs
