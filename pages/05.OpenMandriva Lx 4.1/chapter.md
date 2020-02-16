@@ -1,5 +1,5 @@
 ---
-title: Basics
+title: 'System administration guide'
 taxonomy:
     category: docs
 child_type: docs
