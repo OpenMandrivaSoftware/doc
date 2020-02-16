@@ -1,11 +1,11 @@
 ---
-title: 'Download and Installation'
+title: 'OpenMandriva release notes'
 taxonomy:
     category: docs
 child_type: docs
 ---
 
-### Insallation
+### Title
 
 # Advanced
 
