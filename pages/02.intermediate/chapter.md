@@ -1,11 +1,11 @@
 ---
-title: Intermediate
+title: 'Installation guide'
 taxonomy:
     category: docs
 child_type: docs
 ---
 
-### Chapter 2
+### Title
 
 # Intermediate
 
