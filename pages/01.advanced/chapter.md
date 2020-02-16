@@ -5,7 +5,7 @@ taxonomy:
 child_type: docs
 ---
 
-### Chapter 3
+### Insallation
 
 # Advanced
 
