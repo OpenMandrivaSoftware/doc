@@ -1,0 +1,56 @@
+{%- comment -%}
+  Include as: {% include components/right_sidebar.html %}
+  Depends on: page.content
+  Results in: HTML for the page heading table of contents in right sidebar.
+{%- endcomment -%}
+
+{%- if page.has_toc != false -%}
+  {%- capture page_html -%}
+  {{ content }}
+  {%- endcapture -%}
+
+  {%- assign headings = page_html | split: '<h' -%}
+  {%- assign toc_items = "" | split: "" -%}
+
+  {%- for heading in headings -%}
+    {%- if heading != "" -%}
+      {%- assign level_char = heading | slice: 0, 1 -%}
+      {%- assign level = level_char | times: 1 -%}
+      {%- if level >= 2 and level <= 4 -%}
+        {%- assign closing_tag = '</h' | append: level | append: '>' -%}
+        {%- assign heading_parts = heading | split: closing_tag -%}
+        {%- assign heading_content = heading_parts[0] -%}
+        {%- assign id_parts = heading_content | split: 'id="' -%}
+        {%- if id_parts.size > 1 -%}
+          {%- assign id_part = id_parts[1] | split: '"' -%}
+          {%- assign heading_id = id_part[0] -%}
+          {%- assign text_parts = heading_content | split: '>' -%}
+          {%- assign text = text_parts[-1] | strip_html | strip -%}
+          {%- if text != "" -%}
+            {%- assign toc_item = level | append: '|' | append: heading_id | append: '|' | append: text -%}
+            {%- assign toc_items = toc_items | push: toc_item -%}
+          {%- endif -%}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- if toc_items.size > 0 -%}
+<aside class="right-sidebar" aria-label="Table of contents">
+  <div class="right-sidebar-inner">
+    <h3 class="text-delta" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-light, #888); margin: 0 0 0.5rem;">On this page</h3>
+    <ul style="list-style: none; padding: 0; margin: 0;">
+      {%- for item in toc_items -%}
+        {%- assign parts = item | split: '|' -%}
+        {%- assign level = parts[0] | times: 1 -%}
+        {%- assign id = parts[1] -%}
+        {%- assign text = parts[2] -%}
+        <li style="margin: 0.25rem 0; padding-left: {{ level | minus: 2 | times: 1.5 | append: 'rem' }};">
+          <a href="#{{ id }}" style="font-size: 0.8125rem; color: var(--link-color, #007bff); text-decoration: none; display: block; padding: 0.125rem 0;">{{ text }}</a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</aside>
+  {%- endif -%}
+{%- endif -%}

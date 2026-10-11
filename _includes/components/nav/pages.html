@@ -1,0 +1,24 @@
+{%- comment -%}
+  Override to filter pages by current language for polyglot
+  Include as: {%- include components/nav/pages.html pages=page_array all=bool -%}
+{%- endcomment -%}
+
+{%- comment -%} Detect current language from page.lang or URL {%- endcomment -%}
+{%- assign current_lang = page.lang | default: site.default_lang -%}
+
+{%- assign filtered_pages = include.pages
+      | where_exp: "item", "item.title != nil"
+      | where_exp: "item", "item.lang == current_lang or item.lang == nil" -%}
+
+{%- assign nav_parenthood = filtered_pages | group_by: "parent" -%}
+
+{%- assign nav_top_nodes = nav_parenthood
+      | where_exp: "item", "item.name == ''" | map: "items" | first -%}
+
+{%- include components/nav/sorted.html pages=nav_top_nodes -%}
+
+{% assign nav_top_node_titles = nav_top_nodes | map: "title" -%}
+
+{%- assign nav_ancestors = "" | split: "" -%}
+
+{%- include components/nav/links.html pages=nav_sorted ancestors=nav_ancestors all=include.all -%}

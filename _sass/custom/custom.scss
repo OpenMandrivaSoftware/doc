@@ -1,0 +1,157 @@
+/* Expand the content area to the full browser width, keeping sidebar on left */
+@media (min-width: 50rem) {
+  .side-bar + .main {
+    margin-left: 16.5rem !important;
+    max-width: none !important;
+  }
+}
+@media (min-width: 66.5rem) {
+  .side-bar + .main {
+    margin-left: 16.5rem !important;
+    max-width: none !important;
+  }
+}
+
+/* Left-align sidebar content */
+@media (min-width: 50rem) {
+  .side-bar {
+    align-items: flex-start !important;
+  }
+}
+
+/* Keep sidebar at fixed width, don't expand at large screens */
+@media (min-width: 66.5rem) {
+  .side-bar {
+    width: 16.5rem !important;
+    min-width: 16.5rem !important;
+  }
+}
+
+.main-content-wrap,
+.main-content {
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Ensure the content has some breathing room from the sidebar */
+.main-content {
+  padding-left: 2rem !important;
+}
+
+.home-cards {
+  display: grid;
+  gap: 25px;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.home-cards.cols-1 {
+  grid-template-columns: 1fr;
+}
+
+.home-cards.cols-2 {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+
+.home-card {
+  border: 1px solid $border-color;
+  border-radius: 12px;
+  padding: 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: $body-background-color;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.home-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-color: $link-color;
+}
+
+.home-card h3 {
+  margin: 0 0 10px 0;
+  color: $link-color;
+  font-size: 1.4rem;
+}
+
+.home-card .description {
+  font-size: 0.95rem;
+  color: $body-text-color;
+  margin-bottom: 20px;
+}
+
+.home-card ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-top: 1px solid $border-color;
+  padding-top: 15px !important;
+}
+
+.home-card li {
+  margin-bottom: 8px;
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.home-card li::before,
+.home-card ul::before {
+  content: none !important;
+  display: none !important;
+}
+
+.home-card li a {
+  text-decoration: none;
+  color: $link-color;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+  display: inline-block;
+}
+
+.home-card li a:hover {
+  color: $btn-primary-color;
+  text-decoration: underline;
+}
+
+/* Right sidebar for page TOC */
+@media (min-width: 66.5rem) {
+  .main-content-with-sidebar {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .main-content {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .right-sidebar {
+    width: 16rem;
+    flex-shrink: 0;
+    position: sticky;
+    top: 6rem;
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
+    padding: 1rem;
+    border-left: 1px solid $border-color;
+    background: $sidebar-color;
+  }
+  
+  .right-sidebar-inner {
+    position: sticky;
+    top: 0;
+  }
+}
+
+/* Footer copyright */
+footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid $border-color;
+  color: $body-text-color;
+  font-size: 0.875rem;
+  text-align: center;
+}

@@ -1,0 +1,43 @@
+- title: "Getting Started"
+  description: "New to OpenMandriva? Start here to get up and running quickly."
+  base_url: "/getting-started"
+  links:
+    - name: "Downloading OpenMandriva"
+      base_url: "/getting-started/downloading"
+    - name: "Copying to a USB"
+      base_url: "/getting-started/usb"
+    - name: "Installing OpenMandriva"
+      base_url: "/getting-started/installing"
+
+- title: "User Guide"
+  description: "Detailed instructions on using and configuring the system."
+  base_url: "/user-guide"
+  links:
+    - name: "Desktop Environments"
+      base_url: "/user-guide/desktop"
+    - name: "Software Management"
+      base_url: "/user-guide/software"
+    - name: "Network Configuration"
+      base_url: "/user-guide/network"
+
+- title: "Developer Docs"
+  description: "Information for those contributing to OpenMandriva."
+  base_url: "/dev"
+  links:
+    - name: "Build System"
+      base_url: "/dev/build"
+    - name: "Packaging Guidelines"
+      base_url: "/dev/packaging"
+    - name: "Contribution Process"
+      base_url: "/dev/contribute"
+
+- title: "Community"
+  description: "Connect with other users and contributors."
+  base_url: "/community"
+  links:
+    - name: "Forums"
+      url: "https://forums.openmandriva.org"
+    - name: "IRC/Matrix"
+      base_url: "/community/chat"
+    - name: "Mailing Lists"
+      base_url: "/community/mailing-lists"
