@@ -1,3 +1,7 @@
+---
+name: remove-theme-footer
+description: The theme footer has been customized to remove the theme's default messages.
+---
 # Removing Default Theme Footer Messages
 
 This document describes how to remove the default "This site uses Just the Docs..." message from both the sidebar (desktop) and mobile footer.

@@ -1,3 +1,7 @@
+---
+name: right-sidebar
+description: This Jekyll-based site that uses the Just the Docs theme has a new, custom right sidebar that shows a table of contents. 
+---
 # Right Sidebar (Page TOC) Implementation
 
 This document describes the custom right sidebar that displays a table of contents extracted from page headings.
