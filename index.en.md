@@ -1,7 +1,8 @@
 ---
-title: OpenMandriva Documentation
+title: Home
 layout: home
 card_columns: 2
+nav_order: 1
 lang: en
 ---
 Welcome to the OpenMandriva documentation!
