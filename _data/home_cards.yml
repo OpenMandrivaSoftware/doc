@@ -3,11 +3,11 @@
   base_url: "/getting-started"
   links:
     - name: "Downloading OpenMandriva"
-      base_url: "/getting-started/downloading"
+      base_url: "/getting-started/downloading-openmandriva.en.html"
     - name: "Copying to a USB"
-      base_url: "/getting-started/usb"
+      base_url: "/getting-started/copying-to-usb.en.html"
     - name: "Installing OpenMandriva"
-      base_url: "/getting-started/installing"
+      base_url: "/getting-started/installing-openmandriva.en.html"
 
 - title: "User Guide"
   description: "Detailed instructions on using and configuring the system."

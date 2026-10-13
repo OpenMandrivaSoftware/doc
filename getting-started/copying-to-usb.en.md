@@ -18,11 +18,11 @@ If you're on Windows, there are programs you can do that for you. If you're alre
 
 1. Click the Etcher executable from your browser's download notification. 
 
-1. [other stuff]
+1. Etcher launches. Follow the [Etcher documentation](https://etcher-docs.balena.io/) for help with Etcher. 
 
 ## Making an Installation USB on Linux 
 
-Since Balena Etcher is also available for Linux, you can also follow the above procedure for Windows. But it's better not to install anything; you can do it right from the CLI. 
+Since Balena Etcher is also available for Linux, you can use it on Linux to create your bootable USB. You don't, however, have to; if you don't want to install anything, you can create your bootable installer right from the CLI. 
 
 1. Insert your USB stick, but don't mount/open it. 
 
