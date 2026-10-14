@@ -57,6 +57,9 @@ plugins:
 #
 exclude:
    - .agents/
+   - AGENTS.md 
+   - README.md 
+   - LICENSE.md
    - doc/
    - drawings/
    - .sass-cache/
