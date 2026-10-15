@@ -25,7 +25,7 @@ Once you've chosen and downloaded OpenMandriva, the next thing you do is make a 
 
 Once you've prepared your USB installer, you insert it into an available USB port, start your computer into its boot menu, choose the USB device, and the OpenMandriva installer boots on your system. From there, you go through the installation routine and install OpenMandriva. 
 
-{: .note }
+{: .important }
 
 Always perform a backup before installing OpenMandriva. 
 

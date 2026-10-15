@@ -25,12 +25,15 @@ callouts:
   warning: 
     title: Warning
     color: red 
-  info: 
-    title: Information
+  important: 
+    title: Important
     color: yellow
   note: 
     title: Note 
     color: green
+  tip:
+    title: Tip 
+    color: blue
 defaults:
   - scope:
       path: ""
