@@ -4,7 +4,7 @@
 <node TEXT="OM Docs" FOLDED="false" ID="ID_1554227621" CREATED="1791421491804" MODIFIED="1791421501778" STYLE="oval">
 <font SIZE="18"/>
 <hook NAME="MapStyle" background="#3c3f41ff">
-    <properties edgeColorConfiguration="#808080ff,#00ddddff,#dddd00ff,#dd0000ff,#00dd00ff,#dd0000ff,#7cddddff,#dddd7cff,#dd7cddff,#7cdd7cff,#dd7c7cff,#7c7cddff" auto_compact_layout="true" show_icons="BESIDE_NODES" associatedTemplateLocation="template:/Darcula-1.7.mm" fit_to_viewport="false" show_tags="UNDER_NODES" showTagCategories="false" show_note_icons="true" show_icon_for_attributes="true"/>
+    <properties edgeColorConfiguration="#808080ff,#00ddddff,#dddd00ff,#dd0000ff,#00dd00ff,#dd0000ff,#7cddddff,#dddd7cff,#dd7cddff,#7cdd7cff,#dd7c7cff,#7c7cddff" show_icon_for_attributes="true" auto_compact_layout="true" show_tags="UNDER_NODES" associatedTemplateLocation="template:/Darcula-1.7.mm" show_note_icons="true" show_icons="BESIDE_NODES" fit_to_viewport="false" showTagCategories="false"/>
     <tags category_separator="::"/>
 
 <map_styles>
@@ -99,6 +99,10 @@
 <node TEXT="Updating Your System" ID="ID_354360143" CREATED="1791424524578" MODIFIED="1791424528902"/>
 <node TEXT="Using Flatpaks" ID="ID_1756278408" CREATED="1791424571500" MODIFIED="1791424575940"/>
 <node TEXT="Using Snap" ID="ID_809638101" CREATED="1791424576776" MODIFIED="1791424578901"/>
+</node>
+<node TEXT="Managing Software" ID="ID_1726774464" CREATED="1792087474078" MODIFIED="1792087480942">
+<node TEXT="Using DNF" ID="ID_809112774" CREATED="1792087483603" MODIFIED="1792087490010"/>
+<node TEXT="Configuring Repositories" ID="ID_953992695" CREATED="1792087490456" MODIFIED="1792087496919"/>
 </node>
 </node>
 <node TEXT="Developer Guide" POSITION="bottom_or_right" ID="ID_1876410393" CREATED="1791421532915" MODIFIED="1791421541382">
