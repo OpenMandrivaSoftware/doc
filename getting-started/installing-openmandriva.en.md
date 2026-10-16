@@ -10,7 +10,9 @@ lang: en
 
 Installing OpenMandriva is quick. Once you have your USB stick ready, the installer guides you through the rest.
 
-**Important:** Back up your data before you begin. The installer may shrink, reformat, or wipe hard-drive partitions.
+{: .important }
+
+Always back up your data before you begin. Installing OpenMandriva may shrink, reformat, or wipe hard-drive partitions.
 
 1. Copy OpenMandriva to a USB stick with at least 8 GB of storage. See [Copying OpenMandriva to a USB Stick](./copying-to-usb.en.html).
 
@@ -18,7 +20,7 @@ Installing OpenMandriva is quick. Once you have your USB stick ready, the instal
 
 1. Start the live session. Live mode runs a full OpenMandriva session from the USB stick without modifying your hard drive. Use it to test the system before installing.
 
-1. Open the installer, **Calamares**. From the live desktop, click the *Install OpenMandriva Lx* icon.
+1. Open the installer, *Calamares*. From the live desktop, click the *Install OpenMandriva Lx* icon.
 
 1. Choose your language and keyboard layout on the first page, then click *Configure*.
 

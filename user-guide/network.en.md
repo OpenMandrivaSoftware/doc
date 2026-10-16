@@ -8,34 +8,36 @@ lang: en
 ---
 # Network Configuration
 
-OpenMandriva Lx provides several tools to help you configure and manage network connections. This guide covers both graphical and command-line methods.
+OpenMandriva Lx provides tools to configure and manage network connections. This guide covers graphical and command-line methods.
 
 ## Graphical Network Configuration
 
+Use these methods to set up and manage network connections through a graphical interface.
+
 ### NetworkManager
 
-OpenMandriva uses NetworkManager to manage network connections. You can access it through the system tray or directly via the Settings application.
-
-**To configure a connection graphically:**
+OpenMandriva uses NetworkManager to manage connections. Click the network icon in the system tray to access it.
 
 1. Click the network icon in the system tray
-2. Select "Edit Connections..."
-3. Choose the connection to configure or click "+" to create a new one
-4. Configure the settings (IPv4, IPv6, DNS, etc.)
-5. Click "Save"
+1. Select *Edit Connections...*
+1. Choose the connection to configure, or click *+* to create a new one
+1. Configure settings (IPv4, IPv6, DNS, etc.)
+1. Click *Save*
 
 ### Plasma Network Management
 
-If you're using KDE Plasma, you can access additional network settings through:
+For KDE Plasma users, access additional network settings through
 
 - **System Settings** → **Network** → **Connections**
 - Or run `kcmshell5 kcm_networkmanager` from the terminal
 
 ## Command-Line Network Configuration
 
-### Using nmcli
+Use these tools to manage connections from the terminal.
 
-`nmcli` (NetworkManager Command Line Interface) allows you to manage connections from the terminal:
+### Using `nmcli`
+
+`nmcli` (NetworkManager Command Line Interface) manages connections from the terminal.
 
 ```bash
 # List available connections
@@ -57,7 +59,7 @@ nmcli connection up "Connection Name"
 nmcli connection down "Connection Name"
 ```
 
-### Using nmtui
+### Using `nmtui`
 
 `nmtui` (Ninja Text User Interface) provides a text-based interface for NetworkManager:
 
@@ -65,14 +67,15 @@ nmcli connection down "Connection Name"
 nmtui
 ```
 
-This opens an interactive menu for configuring:
+This opens an interactive menu for configuring
+
 - Editing connections
-- Activating/deactivating connections
+- Activating and deactivating connections
 - Setting up bonding, VLANs, and tunnels
 
-### Using ip command
+### Using the `ip` Command
 
-For basic network configuration, you can use the `ip` command:
+For basic network configuration, use the `ip` command:
 
 ```bash
 # Show network interfaces
@@ -90,12 +93,14 @@ ip route add default via 192.168.1.1
 
 ## Wi-Fi Configuration
 
+Configure wireless connections using these methods.
+
 ### Graphical Method
 
 1. Click the network icon in the system tray
-2. Select a Wi-Fi network from the list
-3. Enter the password when prompted
-4. Check "Remember this network" if desired
+1. Select a Wi-Fi network from the list
+1. Enter the password when prompted
+1. Check *Remember this network* if desired
 
 ### Command-Line Method
 
@@ -112,7 +117,11 @@ nmcli device wifi rescan
 
 ## Troubleshooting
 
+Resolve common network issues with these diagnostic steps.
+
 ### Check Network Status
+
+Run these commands to diagnose network problems:
 
 ```bash
 # Check if network interface is up
@@ -144,6 +153,8 @@ cat /etc/resolv.conf
 
 ## Advanced Configuration
 
+Configure complex networking setups with these tools.
+
 ### Bonding (Link Aggregation)
 
 Create bonded interfaces for increased throughput and redundancy:
@@ -157,6 +168,8 @@ nmcli connection up bond0
 
 ### VLAN Configuration
 
+Create VLAN interfaces to segment network traffic on specific tags:
+
 ```bash
 nmcli connection add type vlan con-name vlan10 dev eth0 id 10
 nmcli connection modify vlan10 ipv4.addresses "192.168.10.1/24"
@@ -165,7 +178,7 @@ nmcli connection up vlan10
 
 ### Bridge Configuration
 
-For virtualization or container networking:
+Create a bridge for virtualization or container networking:
 
 ```bash
 nmcli connection add type bridge ifname br0
