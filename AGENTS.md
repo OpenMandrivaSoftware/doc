@@ -15,3 +15,7 @@ This site includes several custom modifications to the base theme. For detailed 
 - [Multilingual Support](./.agents/multilingual/): Multilingual implementation with the jekyll-polyglot plugin.
 - [Removable Theme Footer](./.agents/remove-theme-footer/): Removing the default theme footer messages.
 - [Right Sidebar (Page TOC)](./.agents/right-sidebar/): Right sidebar that displays a table of contents.
+
+## Writing Overrides 
+
+This platform (Jekyll) and this theme (Just the Docs) generates a Table of Contents at the bottom of every file that has children. Therefore, do not generate Related Topics headings on these pages. Generate Related Topics only on leaf nodes (files that have no children in the navigation). 
