@@ -186,3 +186,8 @@ nmcli connection add type bridge-slave ifname eth0 master br0
 nmcli connection modify br0 ipv4.addresses "192.168.1.1/24"
 nmcli connection up br0
 ```
+
+## Related Topics
+
+- [User Guide](index.en.html)
+- [Managing Software](software.en.html)

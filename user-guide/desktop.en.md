@@ -8,23 +8,26 @@ lang: en
 ---
 # Desktop Environments
 
-OpenMandraiva ships with a desktop environment already installed, so you start with a complete, usable desktop. A desktop environment is the whole visual system: the desktop, the panel, the application menu, and the settings. You can change yours at any time.
+OpenMandriva includes a desktop environment by default. You begin with a complete, working desktop ready for use. A desktop environment includes the desktop itself, the panel, the application menu, and the settings. You can change it freely.
 
-You can change your desktop at any time. The default is KDE Plasma, which is flexible and modern: you can tweak nearly every part of it. GNOME and LXQt are also available if you prefer a quieter, simpler, or lighter desktop. See below.
+*KDE* Plasma is the default. It is flexible and modern, allowing you to tweak nearly every part. GNOME and LXQt are also available for a quieter, simpler, or lighter experience.
 
-## Choose a second one
+## Choose a Second One
 
-You can add other environments without removing Plasma. Install them with the [package manager](../software.en.html) and pick one at the login screen:
+Add another environment without removing Plasma. Install it with the [package manager](../software.en.html), then select your choice at the login screen.
 
-- **GNOME** is simpler and quieter. The whole window fills the screen, with a single bar of apps at the top.
-- **LXQt** is lightweight, so it runs well on older computers or when you want a desktop that stays out of the way.
+- **GNOME** uses a single app bar at the top and fills the screen with windows.
+- **LXQt** is lightweight. It runs well on older computers when you want a desktop that stays out of the way.
 
-Install GNOME or LXQt with your package manager, log out, and choose the environment at the login screen. The login screen lists whatever you installed.
+## They Are All the Same Underneath
 
-## They are all the same underneath
-
-Changing the desktop does not change your files, your settings, or your applications. The desktop is the outer layer; the system, your files, and your software stay in place. Switching back is just a matter of choosing again at the login screen.
+Changing the desktop does not change your files, your settings, or your applications. The desktop is the outer layer; the system, your files, and your software stay in place. Switching back requires only choosing again at the login screen.
 
 {: .tip }
 
-Try a desktop in [live mode](../../getting-started/downloading-openmandriva.html) first. Boot from the USB and explore before committing, so you confirm a look you like before changing your system.
+Try a desktop in [live mode](../../getting-started/downloading-openmandriva.en.html) first. Boot from the USB and explore before committing, so you confirm a look you like before changing your system.
+
+## Related Topics
+
+- [Managing Software](software.en.html)
+- [Getting Started](../../getting-started/index.en.html)

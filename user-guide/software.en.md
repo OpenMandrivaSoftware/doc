@@ -1,36 +1,46 @@
 ---
 layout: default
-title: Software Management
+title: Managing Software
 nav_order: 10
 parent: User Guide
 has_toc: true
 lang: en
 ---
-# Software Management
+# Managing Software
 
 You install and remove software with a package manager. OpenMandriva ships several of them, and you can use whichever you like. All of them reach the same repositories, so whichever you pick they all see the same list of available packages.
 
-## Graphical package managers
+## Graphical Package Managers
 
-- **Discover** is the default, built into GNOME. It finds and removes most applications. Use it for applications, not for system updates.
+These package managers provide graphical interfaces for searching, installing, and managing software.
 
-- **DNFDragora** is a classic OpenMandriva GUI for finding, installing, and removing packages.
+- *Discover* is the default, built into GNOME. It finds and removes most applications. Use it for applications, not for system updates.
 
-- **DnfDrake** adds system-level features Discover does not, such as system-wide upgrades and package history. It also opens the Software Repository Selector.
+- *DNFDragora* is a classic OpenMandriva GUI for finding, installing, and removing packages.
 
-## Command-line package manager
+- *DnfDrake* adds system-level features Discover does not, such as system-wide upgrades and package history. It also opens the Software Repository Selector.
 
-- **DNF** is the fastest and most powerful way to manage software. Almost everything you can do in a GUI you can do in a terminal. See [Using DNF](./using-dnf.en.html).
+## Command-Line Package Manager
 
-## Repository selector and other sources
+For advanced control over software installation and management, use the command-line tools. *DNF* is the fastest and most powerful way to manage software. Almost everything you can do in a GUI you can do in a terminal. See [Using DNF](./using-dnf.en.html).
 
-- **Software Repository Selector** (`om-repo-picker`) picks which release, architecture, and repositories your system uses. See [Software Repository Selector](./repositories-tldr.en.html).
+## Repository Selector and Other Sources
 
-- **Flatpak** applications are packaged separately from the system repositories.
+OpenMandriva provides tools for managing different software sources.
 
-## What OpenMandriva does not provide
+- *Software Repository Selector* (`om-repo-picker`) picks which release, architecture, and repositories your system uses. See [Software Repository Selector](./repositories-tldr.en.html).
+
+- *Flatpak* applications are packaged separately from the system repositories.
+
+## What OpenMandriva Does Not Provide
 
 OpenMandriva does not ship software from third-party sources that sit outside its repositories. You can still run some of these:
 
-- **AppImage** files are self-contained executables that need no installation.
+- *AppImage* files are self-contained executables that need no installation.
+
 - Compiling software from source and installing binary packages from other sources both work, but they need care and are your responsibility.
+
+## Related Topics
+
+- [Using DNF](./using-dnf.en.html)
+- [Software Repository Selector](./repositories-tldr.en.html)

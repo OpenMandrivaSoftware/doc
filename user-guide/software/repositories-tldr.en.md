@@ -2,35 +2,40 @@
 layout: default
 title: Software Repository Selector
 nav_order: 30
-parent: Software Management
+parent: Managing Software
 has_toc: true
 lang: en
 ---
 # Software Repository Selector
 
-The Software Repository Selector (`om-repo-picker`) tells OpenMandriva which release, architecture, and repositories to use. Open it from the application menu (Search for *OpenMandriva Repo Selector*) or from the OM Welcome panel. Changing repositories is usually enough to switch between releases.
+The Software Repository Selector (*om-repo-picker*) configures OpenMandriva to use specific releases, architectures, and repositories. Open it from the application menu (search for *OpenMandriva Repo Selector*) or from the OM Welcome panel. Changing repositories usually switches between releases.
 
-## The four media sources
+## The Four Media Sources
 
-Every repository has one of these four media sources:
+The Software Repository Selector manages four types of repositories that OpenMandriva uses. Each type serves a different purpose:
 
-- **main** holds the core packages that the OpenMandriva Lx team maintains. This includes everything in the install images plus other commonly used applications. `main/release` should always be enabled. Leave `main/testing` off unless you know why you want it.
+- **Main** contains core packages maintained by the OpenMandriva Lx team. This includes everything in the install images plus other commonly used applications. *main/release* should always be enabled. Leave *main/testing* disabled unless you need bleeding-edge packages.
 
-- **extra** holds community-maintained packages. The core team does not maintain these, so some work well and some do not. You are welcome to use whatever works.
+- **Extra** contains community-maintained packages. The core team does not maintain these, so some work well and some do not. You can use whatever works for your needs.
 
-- **restricted** holds libraries that OpenMandriva cannot install by default for legal reasons such as patents. Availability varies by country. If these are not allowed where you live, leave them disabled.
+- **Restricted** contains libraries that OpenMandriva cannot install by default for legal reasons such as patents. Availability varies by country. If these packages are prohibited in your region, leave them disabled.
 
-- **non-free** holds applications and drivers that do not meet the definition of Free Software. OpenMandriva cannot fix problems caused by these, because it has no source code.
+- **Non-Free** contains applications and drivers that do not meet the definition of Free Software. OpenMandriva cannot fix problems caused by these packages, because no source code is available.
 
 You can also enable third-party repositories that OpenMandriva does not host.
 
-## After the changes
+## Refreshing Repository Data
 
-Save your changes, and then run this in a terminal:
+After changing repositories, save your changes. Then refresh your local repository cache by running:
 
 ```bash
 dnf clean all
 dnf repolist
 ```
 
-This refreshes your local list of repositories and confirms the ones you enabled.
+You see your refreshed repository list and confirm the repositories you enabled.
+
+## Related Topics
+
+- [Managing Software](../software.en.html)
+- [Using DNF](./using-dnf.en.html)

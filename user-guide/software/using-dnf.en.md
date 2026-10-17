@@ -2,7 +2,7 @@
 layout: default
 title: Using DNF
 nav_order: 20
-parent: Software Management
+parent: Managing Software
 has_toc: true
 lang: en
 ---
@@ -64,3 +64,8 @@ man dnf4
 Reading the help message takes about one minute; the man page takes a few minutes.
 
 The man page for DNF4 and the [DNF5 command reference](https://dnf5.readthedocs.io/en/latest/ref_cli.html) both list these commands and options in detail.
+
+## Related Topics
+
+- [Managing Software](../software.en.html)
+- [Software Repository Selector](./repositories-tldr.en.html)

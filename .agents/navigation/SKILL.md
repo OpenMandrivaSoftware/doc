@@ -100,6 +100,47 @@ For sidebar links:
 - Section indices like `getting-started/index.en.md` → `/getting-started/index.en.html`
 - Pages use relative links based on current file location
 
+## Determining Correct URLs
+
+To determine the correct relative path for a link in a markdown file:
+
+### Step 1: Identify the Source File Location
+Note the full path of the file containing the link. For example:
+- `user-guide/desktop.en.md` → located in `/docs/user-guide/`
+
+### Step 2: Identify the Target File Location
+Note the full path of the target file. For example:
+- `getting-started/downloading-openmandriva.en.md` → located in `/docs/getting-started/`
+
+### Step 3: Calculate the Relative Path
+
+To calculate the relative path from a source file to a target file:
+
+**Example: From `user-guide/desktop.en.md` to `getting-started/downloading-openmandriva.en.md`**
+- From `user-guide/` directory, you need to go up one level to reach `docs/`
+- Then descend into `getting-started/` and access the file
+- Relative path: `../../getting-started/downloading-openmandriva.en.html`
+  - `..` (from `user-guide` to `docs`)
+  - `../getting-started/` (down into `getting-started`)
+  - `downloading-openmandriva.en.html` (the target file with correct extension)
+
+### Step 4: Apply URL Extension
+Always use the `.en.html` extension for English pages, not `.md`.
+
+**Common Patterns:**
+- Same directory: `./page.en.html` or just `page.en.html`
+- Parent directory: `../page.en.html`
+- Sibling directory: `./sibling/page.en.html`
+
+**Example: Linking to a sibling section**
+If you're in `user-guide/software/repositories-tldr.en.md` and want to link to `software.en.md` in the parent `user-guide/` directory:
+- Source: `user-guide/software/repositories-tldr.en.md`
+- Target: `user-guide/software.en.md`
+- Relative path: `../software.en.html` (go up from `software/` to `user-guide/`, then access `software.en.md`)
+
+### Step 5: Verify the Link
+Before committing, verify the target file exists at the calculated path.
+
 ## Common Pitfalls
 
 ### 1. Circular Parent References
